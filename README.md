@@ -10,6 +10,10 @@ The current focus is learning API testing basics on the `Restful Booker` service
 - JavaScript
 - Node.js
 
+## Additional tools
+
+- EchoAPI for manual API exploration and request validation before automating tests in Playwright
+
 ## Project structure
 
 ```text
