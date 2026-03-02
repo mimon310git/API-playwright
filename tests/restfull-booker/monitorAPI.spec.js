@@ -2,7 +2,7 @@ import { test, expect } from "@playwright/test";
 
 test("Checking the monitor API", async ({ request }) => {
   //default timeout is 30 seconds
-  // test.setTimeout(60000); // Set timeout to 60 seconds
+  test.setTimeout(6000); // Set timeout to 60 seconds
   while (true) {
     const startTime = Date.now();
 

@@ -1,16 +1,14 @@
-﻿# API Playwright
+# API Playwright
 
-Simple API testing project built with Playwright.
+API automation practice project built with Playwright and JavaScript.
 
-This repository is focused on practicing API automation against the `Restful Booker` service.
+The current focus is learning API testing basics on the `Restful Booker` service: request methods, response validation, token usage, and simple CRUD flows.
 
-## What is included
+## Tech stack
 
-- API tests written with Playwright
-- Basic CRUD flow coverage
-- Token-based authenticated requests
-- JSON test data example
-- Simple API monitor check
+- Playwright
+- JavaScript
+- Node.js
 
 ## Project structure
 
@@ -20,25 +18,24 @@ API-Playwright/
     booking.json
   tests/
     restfull-booker/
-      API-examples.spec.js
       bookJSON.spec.js
+      delete-booking.spec.js
+      get-api.spec.js
       monitorAPI.spec.js
+      post-booking.spec.js
+      post-create-booking.spec.js
+      put-booking.spec.js
 ```
 
 ## Covered scenarios
 
-- `GET` request validation
+- `GET` API validation
 - `POST` create booking
 - `PUT` update booking
 - `DELETE` booking
-- create booking from JSON file
-- monitor `/ping` endpoint
-
-## Tech stack
-
-- Playwright
-- JavaScript
-- Node.js
+- create booking from external JSON data
+- simple `/ping` monitor check
+- token-based authenticated requests
 
 ## Installation
 
@@ -54,27 +51,28 @@ Run all tests:
 npx playwright test
 ```
 
-Run only Restful Booker tests:
+Run only the `restfull-booker` folder:
 
 ```bash
 npx playwright test tests/restfull-booker
 ```
 
-Run a single file:
+Run a single spec file:
 
 ```bash
-npx playwright test tests/restfull-booker/API-examples.spec.js
+npx playwright test tests/restfull-booker/delete-booking.spec.js
 ```
 
-## Reports
+## Report
 
-After the test run, open the Playwright HTML report:
+Open the Playwright HTML report after a run:
 
 ```bash
 npx playwright show-report
 ```
 
-## Notes
+## Purpose
 
-- This project is for learning and portfolio practice.
-- The current focus is API testing only.
+- learning Playwright API testing from basics
+- practicing CRUD operations and assertions
+- building a small API automation portfolio project
